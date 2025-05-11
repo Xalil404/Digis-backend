@@ -1,2 +1,2 @@
-# New Web Projects Template
-Use this template when creating new web applications.
+# Digis Backend Customer Portal
+This is the backend for the Digis customer portal. 
