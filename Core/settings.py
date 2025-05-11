@@ -28,8 +28,8 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 
 ALLOWED_HOSTS = [
     'digis-backend-d265ab9ce76f.herokuapp.com',  
@@ -53,9 +53,14 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'Core', # To customize admin panel & show user ID
     'home',
 ]
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 SITE_ID = 1
