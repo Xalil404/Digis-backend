@@ -1,2 +1,12 @@
 # Digis Backend Customer Portal
-This is the backend for the Digis customer portal. 
+This is the backend for the Digis customer portal.  The front-end part can be found [here]().
+
+Link to live site [here](https://digis-backend-d265ab9ce76f.herokuapp.com/).
+
+<p align="center">
+<img src="https://res.cloudinary.com/dnbbm9vzi/image/upload/v1746963995/Screenshot_2025-05-11_at_12.42.45_PM_gnrxhj.png" width="auto" height="auto" alt="image of the Jessster website"></p>
+
+## Platform features
+* Backend using Django and python
+* Frontend using React
+* Front-end and mobile app communicate to a single database using REST API; all documentation is in Swagger & Redoc
