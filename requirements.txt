@@ -17,3 +17,10 @@ urllib3==2.4.0
 whitenoise==6.9.0
 django-crispy-forms==2.4
 crispy-bootstrap4==2024.10
+drf-yasg==1.21.10
+djangorestframework==3.16.0
+uritemplate==4.1.1
+pytz==2025.2
+PyYAML==6.0.2
+inflection==0.5.1
+django-cors-headers==4.7.0
