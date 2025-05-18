@@ -1,7 +1,11 @@
 # outstaff/models.py
 from django.db import models
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 class JobBrief(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='job_briefs') 
     title = models.CharField(max_length=255)
     description = models.TextField()
     brief_link = models.URLField(blank=True, null=True)
@@ -12,6 +16,8 @@ class JobBrief(models.Model):
 
 
 class OutstaffCandidate(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='candidates')
+    
     class Status(models.TextChoices):
         NOT_AVAILABLE = 'not_available', 'Not Available'
         AVAILABLE = 'available', 'Available'
