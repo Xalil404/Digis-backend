@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'home',
     'profileAPI',
     'tasksAPI',
+    'outsourceAPI',
     'outstaffAPI',
     'drf_yasg', # To generate swagger & redo docs
     'rest_framework',  # For Django REST Framework API URLs
