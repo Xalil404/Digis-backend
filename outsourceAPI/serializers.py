@@ -17,6 +17,7 @@ class OutsourceRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = OutsourceRequest
         fields = ['id', 'user', 'title', 'nda_link', 'created_at', 'stages', 'progress_percentage']
+        read_only_fields = ['user']
 
 
 class OutsourceProgressSerializer(serializers.ModelSerializer):
