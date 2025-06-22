@@ -10,7 +10,7 @@ class OutstaffCandidateAdmin(admin.ModelAdmin):
     ordering = ('-created_at',)
     fieldsets = (
         (None, {
-            'fields': ('name', 'role', 'rate', 'cv_link', 'status')
+            'fields': ('user','name', 'role', 'rate', 'cv_link', 'status')
         }),
         ('Timestamps', {
             'fields': ('created_at', 'updated_at'),
