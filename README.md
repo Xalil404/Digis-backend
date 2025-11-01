@@ -1,5 +1,5 @@
 # Digis Backend Customer Portal
-This is the backend for the Digis customer portal.  The front-end part can be found [here](https://digis-frontend.vercel.app/).
+This is the backend for the Digis customer portal.  The front-end part can be found [here](https://github.com/Xalil404/digis-frontend).
 
 Link to live site [here](https://digis-backend.onrender.com/).
 
