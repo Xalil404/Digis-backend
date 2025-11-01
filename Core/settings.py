@@ -32,7 +32,8 @@ DEBUG = True
 # DEBUG = False
 
 ALLOWED_HOSTS = [
-    'digis-backend-d265ab9ce76f.herokuapp.com',  
+    'digis-backend-d265ab9ce76f.herokuapp.com',
+    'digis-backend.onrender.com',  
     '127.0.0.1', 
     'localhost'
 ]
