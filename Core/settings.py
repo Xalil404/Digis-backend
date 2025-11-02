@@ -193,18 +193,18 @@ WSGI_APPLICATION = 'Core.wsgi.application'
 
 # below database is to deploy on Railway
 db_url = os.environ.get("DATABASE_URL")
+print("DATABASE_URL:", db_url)  # <-- add this temporarily
 
-if db_url is None:
-    # Fallback for local development
-    db_url = "sqlite:///db.sqlite3"
-else:
-    # Ensure it is a str (not bytes)
-    if isinstance(db_url, bytes):
-        db_url = db_url.decode("utf-8")
-    
-    # Remove extra b'' wrapper if present
-    if db_url.startswith("b'") and db_url.endswith("'"):
-        db_url = db_url[2:-1]
+if not db_url:
+    raise RuntimeError("DATABASE_URL environment variable is missing!")
+
+# If bytes, decode
+if isinstance(db_url, bytes):
+    db_url = db_url.decode("utf-8")
+
+# Strip extra b'' if present
+if db_url.startswith("b'") and db_url.endswith("'"):
+    db_url = db_url[2:-1]
 
 DATABASES = {
     'default': dj_database_url.parse(db_url, conn_max_age=600, ssl_require=True)
