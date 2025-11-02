@@ -191,11 +191,11 @@ WSGI_APPLICATION = 'Core.wsgi.application'
 #}
 
 # below database is to deploy on Heroku and Render
-#DATABASES = {
-#    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-#}
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
-
+'''
 # below database is to deploy on Railway
 db_url = os.environ.get("DATABASE_URL")
 print("DATABASE_URL:", db_url)  # <-- add this temporarily
@@ -214,6 +214,7 @@ if db_url.startswith("b'") and db_url.endswith("'"):
 DATABASES = {
     'default': dj_database_url.parse(db_url, conn_max_age=600, ssl_require=True)
 }
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
