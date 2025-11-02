@@ -9,4 +9,4 @@ Link to live site [here](https://digis-backend.onrender.com/).
 ## Platform features
 * Backend using Django and python
 * Frontend using React
-* Front-end and backend database communicate using REST API; all documentation is in Swagger & Redoc
+* Front-end and backend database communicate using REST API; all documentation is in Swagger & Redoc.
