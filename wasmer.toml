@@ -1,0 +1,14 @@
+# wasmer.toml
+[build]
+# Use generic Python 3.12 (no patch version)
+python = "3.12"
+
+# Path to your requirements file
+requirements = "requirements.txt"
+
+# Optional: directory for your virtualenv (Wasmer handles this automatically)
+venv = ".venv"
+
+[deploy]
+# The entrypoint for your WSGI app
+entrypoint = "Core.wsgi:application"
