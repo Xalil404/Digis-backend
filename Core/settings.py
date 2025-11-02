@@ -28,12 +28,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = [
     'digis-backend-d265ab9ce76f.herokuapp.com',
     'digis-backend.onrender.com',  
+    'web-production-8573b.up.railway.app',
     '127.0.0.1', 
     'localhost'
 ]
