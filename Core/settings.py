@@ -194,6 +194,10 @@ WSGI_APPLICATION = 'Core.wsgi.application'
 # below database is to deploy on Railway
 db_url = os.environ.get("DATABASE_URL")
 
+# Ensure it is a str (not bytes)
+if isinstance(db_url, bytes):
+    db_url = db_url.decode("utf-8")
+
 DATABASES = {
     'default': dj_database_url.parse(db_url, conn_max_age=600, ssl_require=True)
 }
