@@ -198,6 +198,10 @@ db_url = os.environ.get("DATABASE_URL")
 if isinstance(db_url, bytes):
     db_url = db_url.decode("utf-8")
 
+# Remove extra b'' if present
+if db_url.startswith("b'") and db_url.endswith("'"):
+    db_url = db_url[2:-1]
+
 DATABASES = {
     'default': dj_database_url.parse(db_url, conn_max_age=600, ssl_require=True)
 }
